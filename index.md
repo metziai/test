@@ -16,3 +16,14 @@ v4l2-ctl --list-devices
 （下面是通用思路，不同系统可能要换成你实际的 /dev/videoX）
 
 gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! autovideosink
+
+
+v4l2-ctl 是 Linux 上 V4L2（Video4Linux2） 的命令行工具，用来查看/控制摄像头设备（/dev/video*），比如列出设备、看支持的格式/分辨率、调参数、做简单抓帧测试。
+
+常用速查（直接复制用）：
+
+# 1) 列出所有视频设备（摄像头/采集卡）
+v4l2-ctl --list-devices
+
+# 2) 查看某个节点的详细信息
+v4l2-ctl -d /dev/video0 --all
