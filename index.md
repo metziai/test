@@ -3,7 +3,9 @@
 刷好系统、插好相机后，在 Jetson 上跑：
 
 3.1 看系统有没有枚举出摄像头节点
+
 ls /dev/video*
+
 v4l2-ctl --list-devices
 
 
